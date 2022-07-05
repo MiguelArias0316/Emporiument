@@ -4,6 +4,20 @@ body {
   font-family: "Poppins,Arial", sans-serif;
 }
 
+.card1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #eaeaea;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: 15px;
+  height: 340px;
+  text-align: center;
+}
+
 .rounded {
   border-radius: 0.25rem !important;
   margin: 25px;
@@ -13,6 +27,8 @@ body {
   flex: 1 1 auto;
   padding: 0rem 1rem;
 }
+
+
 
 .ftco-section {
   padding: 7rem 0 2rem;
@@ -272,6 +288,12 @@ body {
   margin-bottom: 4rem;
 }
 
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: 32rem;
@@ -328,6 +350,13 @@ body {
   font-family: "FontAwesome";
 }
 
+.mb60 {
+  margin-bottom: 60px;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
 
 /* MARKETING CONTENT
   -------------------------------------------------- */
@@ -350,6 +379,9 @@ body {
   margin-left: .75rem;
 }
 
+/* rtl:end:ignore */
+
+
 /* Featurettes
   ------------------------- */
 
@@ -371,10 +403,19 @@ body {
   -------------------------------------------------- */
 
 @media (min-width: 40em) {
+
+  /* .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    } */
+
   .featurette-heading {
     font-size: 50px;
   }
 }
+
+.static-size {}
 
 .social-media a {
   color: #f6f6f6;
@@ -392,6 +433,7 @@ body {
   fill: currentColor;
 }
 
+
 /*---------------------
   Header
 -----------------------*/
@@ -407,6 +449,151 @@ body {
 .header__top__inner {
   height: 102px;
   padding-top: 38px;
+}
+
+.header__top__left {
+  float: left;
+}
+
+.header__top__left ul li {
+  font-size: 14px;
+  color: #212529;
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+  position: relative;
+  padding: 2px 0;
+  cursor: pointer;
+}
+
+.header__top__left ul li a {
+  color: #212529;
+}
+
+.header__top__left ul li:hover ul {
+  top: 24px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.header__top__left ul li ul {
+  background: #212529;
+  display: inline-block;
+  padding: 2px 0;
+  position: absolute;
+  left: 0;
+  top: 44px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 3;
+  -webkit-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  transition: all, 0.3s;
+}
+
+.header__top__left ul li ul li {
+  list-style: none;
+  font-size: 13px;
+  color: #ffffff;
+  padding: 2px 15px;
+  cursor: pointer;
+}
+
+.header__top__left ul li ul li:after {
+  display: none;
+}
+
+.header__top__left ul li:after {
+  position: absolute;
+  right: -19px;
+  top: 1px;
+  content: "|";
+  color: #bbbbbb;
+}
+
+.header__top__left ul li:last-child {
+  margin-right: 0;
+}
+
+.header__top__left ul li:last-child:after {
+  display: none;
+}
+
+.header__top__left ul li span {
+  color: #888888;
+}
+
+.header__logo {
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  margin-left: -60px;
+}
+
+.header__logo a {
+  display: inline-block;
+}
+
+.header__top__right {
+  float: right;
+}
+
+.header__top__right__links {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.header__top__right__links a {
+  display: inline-block;
+  margin-right: 56px;
+  position: relative;
+}
+
+.header__top__right__links a:after {
+  position: absolute;
+  right: -32px;
+  top: 0px;
+  content: "|";
+  font-size: 16px;
+  color: #bababa;
+}
+
+.header__top__right__links a:last-child {
+  margin-right: 0;
+}
+
+.header__top__right__links a:last-child:after {
+  display: none;
+}
+
+.header__top__right__cart {
+  display: inline-block;
+}
+
+.header__top__right__cart a {
+  position: relative;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.header__top__right__cart a span {
+  font-size: 15px;
+  color: #212529;
+  position: absolute;
+  left: 7px;
+  top: 4px;
+}
+
+.header__top__right__cart .cart__price {
+  display: inline-block;
+  color: #888888;
+  font-size: 15px;
+  position: relative;
+  top: 4px;
+}
+
+.header__top__right__cart .cart__price span {
+  color: #212529;
 }
 
 .header__menu {
@@ -530,6 +717,11 @@ img {
   padding-left: 3.965rem;
 }
 
+.form-check-input:checked {
+  background-color: #ff5733;
+  border-color: #ff5733;
+}
+
 .form-check-input {
   border: 1px solid #ff5733;
 }
@@ -600,23 +792,4 @@ img {
 #maquillaje:checked~#productosCuidadoPersonal .maquillaje,
 #maquillaje:checked~#productosCuidadoPersonal .maquillaje {
   display: none;
-}
-.block {
-  margin: 20px;
-  border-radius: 4px;
-  width: 338px;
-  min-height: 430px;
-  background: #fff;
-  padding: 23px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  box-shadow: 0 2px 55px rgba(0,0,0,0.1);
-}
-.dish-card .dish-card__container-image {
-  position: relative;
 }

@@ -1,9 +1,37 @@
 body {
   padding-bottom: 3rem;
   color: #5a5a5a;
-  font-family: "Poppins,Arial", sans-serif;
+  font-size: 14px;
+  line-height: 1.80857;
+  font-weight: normal;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
 }
-
+ul, li, ol {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0;
+  font-weight: normal;
+  position: relative;
+  padding: 0 0 10px 0;
+  font-weight: normal;
+  line-height: normal;
+  color: #111111;
+  margin: 0;
+}
+a {
+  color: #1f1f1f;
+  text-decoration: none !important;
+  outline: none !important;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
 .card1 {
   position: relative;
   display: flex;
@@ -284,27 +312,14 @@ body {
   background-position: center center;
 }
 
-.carousel {
+/* .carousel {
   margin-bottom: 4rem;
-}
+} */
 
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   bottom: 3rem;
   z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 32rem;
-}
-
-.carousel-item>img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 32rem;
 }
 
 .tutor-block {
@@ -437,244 +452,6 @@ body {
 /*---------------------
   Header
 -----------------------*/
-.header {
-  background: #252525;
-}
-
-.header__top {
-  position: relative;
-  background: #ffffff;
-}
-
-.header__top__inner {
-  height: 102px;
-  padding-top: 38px;
-}
-
-.header__top__left {
-  float: left;
-}
-
-.header__top__left ul li {
-  font-size: 14px;
-  color: #212529;
-  list-style: none;
-  display: inline-block;
-  margin-right: 30px;
-  position: relative;
-  padding: 2px 0;
-  cursor: pointer;
-}
-
-.header__top__left ul li a {
-  color: #212529;
-}
-
-.header__top__left ul li:hover ul {
-  top: 24px;
-  opacity: 1;
-  visibility: visible;
-}
-
-.header__top__left ul li ul {
-  background: #212529;
-  display: inline-block;
-  padding: 2px 0;
-  position: absolute;
-  left: 0;
-  top: 44px;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 3;
-  -webkit-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  transition: all, 0.3s;
-}
-
-.header__top__left ul li ul li {
-  list-style: none;
-  font-size: 13px;
-  color: #ffffff;
-  padding: 2px 15px;
-  cursor: pointer;
-}
-
-.header__top__left ul li ul li:after {
-  display: none;
-}
-
-.header__top__left ul li:after {
-  position: absolute;
-  right: -19px;
-  top: 1px;
-  content: "|";
-  color: #bbbbbb;
-}
-
-.header__top__left ul li:last-child {
-  margin-right: 0;
-}
-
-.header__top__left ul li:last-child:after {
-  display: none;
-}
-
-.header__top__left ul li span {
-  color: #888888;
-}
-
-.header__logo {
-  position: absolute;
-  left: 50%;
-  top: 25px;
-  margin-left: -60px;
-}
-
-.header__logo a {
-  display: inline-block;
-}
-
-.header__top__right {
-  float: right;
-}
-
-.header__top__right__links {
-  display: inline-block;
-  margin-right: 25px;
-}
-
-.header__top__right__links a {
-  display: inline-block;
-  margin-right: 56px;
-  position: relative;
-}
-
-.header__top__right__links a:after {
-  position: absolute;
-  right: -32px;
-  top: 0px;
-  content: "|";
-  font-size: 16px;
-  color: #bababa;
-}
-
-.header__top__right__links a:last-child {
-  margin-right: 0;
-}
-
-.header__top__right__links a:last-child:after {
-  display: none;
-}
-
-.header__top__right__cart {
-  display: inline-block;
-}
-
-.header__top__right__cart a {
-  position: relative;
-  display: inline-block;
-  margin-right: 6px;
-}
-
-.header__top__right__cart a span {
-  font-size: 15px;
-  color: #212529;
-  position: absolute;
-  left: 7px;
-  top: 4px;
-}
-
-.header__top__right__cart .cart__price {
-  display: inline-block;
-  color: #888888;
-  font-size: 15px;
-  position: relative;
-  top: 4px;
-}
-
-.header__top__right__cart .cart__price span {
-  color: #212529;
-}
-
-.header__menu {
-  text-align: center;
-}
-
-.header__menu ul li {
-  list-style: none;
-  display: inline-block;
-  position: relative;
-  margin-right: -5px;
-  border-right: 1.1px dashed #fff;
-}
-
-ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.header__menu ul li.active a {
-  background: #FF5733;
-}
-
-.header__menu ul li:hover a {
-  background: #FF5733;
-}
-
-.header__menu ul li:hover .dropdown {
-  top: 62px;
-  opacity: 1;
-  visibility: visible;
-}
-
-.header__menu ul li:last-child {
-  margin-right: 0;
-}
-
-.header__menu ul li .dropdown {
-  position: absolute;
-  left: 0;
-  top: 82px;
-  width: 150px;
-  background: #212529;
-  text-align: left;
-  padding: 5px 0;
-  z-index: 9;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  transition: all, 0.3s;
-}
-
-.header__menu ul li .dropdown li {
-  display: block;
-  margin-right: 0;
-}
-
-.header__menu ul li .dropdown li a {
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: 400;
-  padding: 5px 20px;
-  text-transform: capitalize;
-}
-
-.header__menu ul li .dropdown li a:after {
-  display: none;
-}
-
-.header__menu ul li a {
-  font-size: 16px;
-  color: #ffffff;
-  display: block;
-  padding: 20px 35px 18px;
-  letter-spacing: 1px;
-  -webkit-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  transition: all, 0.3s;
-  text-decoration: none;
-}
 
 .offcanvas-menu-wrapper {
   display: none;
@@ -792,4 +569,190 @@ img {
 #maquillaje:checked~#productosCuidadoPersonal .maquillaje,
 #maquillaje:checked~#productosCuidadoPersonal .maquillaje {
   display: none;
+}
+/* INDEX */
+.banner_bg_main {
+  width: 100%;
+  float: left;
+  background-image: url(../assets/img/banner-bg.png);
+  height: auto;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.header_section_top {
+  width: 100%;
+  float: left;
+  background-color: #2b2a29;
+  clip-path: polygon(0 0, 100% 0, 96% 100%, 3% 100%);
+  height: auto;
+  padding: 10px 0px;
+}
+.custom_menu {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.custom_menu ul {
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+}
+
+.custom_menu li {
+  float: left;
+  font-size: 16px;
+  color: #f1f1f1;
+  padding: 6px 10px 0px 10px;
+}
+
+.custom_menu li a {
+  color: #f1f1f1;
+}
+
+.custom_menu li a:hover {
+  color: #ff5733;
+}
+.logo_section {
+  width: 100%;
+  float: left;
+}
+.logo {
+  width: 100%;
+  float: left;
+  text-align: center;
+  padding: 30px 0px;
+}
+.header_section {
+  width: 100%;
+  display: flex;
+}
+.containt_main {
+  display: flex;
+}
+.layout_padding {
+  padding-top: 90px;
+  padding-bottom: 0px;
+}
+.banner_section {
+  width: 100%;
+  float: left;
+  padding-bottom: 60px;
+}
+.banner_taital {
+  width: 100%;
+  font-size: 60px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.buynow_bt {
+  width: 170px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.buynow_bt a {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #252525;
+  text-align: center;
+  padding: 10px 0px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.buynow_bt a:hover {
+  background-color: #ff5733;
+  transition-duration: 0.1s;
+}
+.dropdown, .dropleft, .dropright, .dropup {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+/*   margin-left: 30px; */
+  order: 2;
+}
+.main {
+  flex: 1;
+  margin: 0px 30px;
+  display: inline-block;
+  order: 2;
+}
+.fashion_taital {
+  width: 100%;
+  font-size: 40px;
+  color: #30302e;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+.jewellery_section {
+  width: 100%;
+  float: left;
+  padding-bottom: 50px;
+}
+#jewellery_main_slider a.carousel-control-next {
+  right: 615px;
+  top: 75%;
+}
+
+#jewellery_main_slider a.carousel-control-prev {
+  left: 615px;
+  top: 75%;
+}
+
+#jewellery_main_slider .carousel-control-next,
+#jewellery_main_slider .carousel-control-prev {
+  width: 55px;
+  height: 55px;
+  background-color: #30302e;
+  opacity: 1;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+#jewellery_main_slider .carousel-control-next:focus,
+#jewellery_main_slider .carousel-control-next:hover,
+#jewellery_main_slider .carousel-control-prev:focus,
+#jewellery_main_slider .carousel-control-prev:hover {
+  color: #fff;
+  background-color: #ff5733;
+}
+.input-group .btn {
+  position: unset;
+  z-index: 2;
+}
+#my_slider .carousel-control-next, #my_slider .carousel-control-prev {
+  width: 45px;
+  height: 45px;
+  background: rgb(242, 222, 172, 0.80);
+  opacity: 1;
+  font-size: 20px;
+  color: #000;
+  border-radius: 100px;
+}
+.carousel-item {
+  position: relative;
+  display: none;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  transition: -webkit-transform .6s ease;
+  transition: transform .6s ease;
+  transition: transform .6s ease,-webkit-transform .6s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+#my_slider a.carousel-control-next {
+  right: 0px;
+  top: 40px;
 }

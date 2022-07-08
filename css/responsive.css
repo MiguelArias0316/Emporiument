@@ -176,9 +176,10 @@
     .banner_bg_main {
         background-size: 100% 100%;
     }
-    .dropdown {
+    .dropdown-categorias {
         display: none;
     }
+    
     .tshirt_img {
         margin: 20px 0px;
         min-height: 320px;
@@ -257,7 +258,7 @@
         margin-bottom: 20px;
         justify-content: space-between;
     }
-    .dropdown {
+    .dropdown-categorias {
         display: none;
     }
     .login_menu li {
@@ -385,9 +386,6 @@
         width: 100%;
         margin-bottom: 20px;
         justify-content: space-between;
-    }
-    .dropdown {
-        display: none;
     }
     .login_menu li {
         float: left;
